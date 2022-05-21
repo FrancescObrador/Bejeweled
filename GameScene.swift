@@ -10,10 +10,15 @@ import GameplayKit
 
 class GameScene: SKScene {
     
+    let tileWidth: CGFloat = 32.0
+    let tileHeight: CGFloat = 36.0
+
+    let gameLayer = SKNode()
+    let gemsLayer = SKNode()
+
     override func didMove(to view: SKView) {
         
     }
-    
     
     func touchDown(atPoint pos : CGPoint) {
        
