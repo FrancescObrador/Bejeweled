@@ -11,6 +11,9 @@ import GameplayKit
 
 class GameViewController: UIViewController {
 
+    var board : Board!
+    var gameScene: GameScene!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,6 +25,8 @@ class GameViewController: UIViewController {
                 
                 // Present the scene
                 view.presentScene(scene)
+                
+                gameScene = (scene as! GameScene)
             }
             
             view.ignoresSiblingOrder = true
@@ -29,6 +34,8 @@ class GameViewController: UIViewController {
             view.showsFPS = true
             view.showsNodeCount = true
         }
+        
+        gameScene.beginGame()
     }
 
     override var shouldAutorotate: Bool {

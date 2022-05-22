@@ -8,16 +8,16 @@
 import SpriteKit
 
 enum GemType : Int {
-    case blue, green, orange, purple, red, white, yellow
+    case amber, amethyst, diamond, esmerald, ruby, sapphire, topaz
     
     var spriteName: String {
         let spriteNames = [
-            "sapphire",
-            "esmerald",
             "amber",
             "amethyst",
-            "ruby",
             "diamond",
+            "esmerald",
+            "ruby",
+            "sapphire",
             "topaz"]
         
         return spriteNames[rawValue]
