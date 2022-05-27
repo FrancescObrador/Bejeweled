@@ -10,19 +10,27 @@ import GameplayKit
 
 class GameScene: SKScene {
     
-    var board: Board!
+    var board = Board()
+    
+    private var selectorSprite = SKSpriteNode()
     
     let tileWidth: CGFloat = 64.0
     let tileHeight: CGFloat = 64.0
     
     private var swipeFromColumn: Int?
     private var swipeFromRow: Int?
+    var swipeHandler: ((Swap) -> Void)?
     
     let gameLayer = SKNode()
     let gemsLayer = SKNode()
     let tilesLayer = SKNode()
     
-    func beginGame(){
+    func Start(){
+        
+        let background = SKSpriteNode(imageNamed: "background")
+        background.zPosition = -10
+        addChild(background)
+        
         addChild(gameLayer)
         
         let layerPosition = CGPoint(
@@ -30,15 +38,19 @@ class GameScene: SKScene {
             y: -tileHeight * CGFloat(numRows) / 2)
         
         gemsLayer.position = layerPosition
+        gemsLayer.zPosition = 0
         tilesLayer.position = layerPosition
         tilesLayer.zPosition = -1;
+        
         gameLayer.addChild(gemsLayer)
         gameLayer.addChild(tilesLayer)
         
-        board = Board()
         let newGems = board.createGemsSet()
         addSprites(for: newGems)
         addTiles()
+        
+        selectorSprite = SKSpriteNode(imageNamed: "selector")
+        selectorSprite.size = CGSize(width: tileWidth, height: tileHeight)
     }
     
     func addSprites(for gems: Set<Gem>) {
@@ -57,7 +69,7 @@ class GameScene: SKScene {
         
         for row in 0...numRows-1 {
             for column in 0...numColumns-1 {
-                let tileNode = (tileCount % 2 == 0) ? SKSpriteNode(imageNamed: "Tile") : SKSpriteNode(imageNamed: "Tilex")
+                let tileNode = (tileCount % 2 == 0) ? SKSpriteNode(imageNamed: "Tile01") : SKSpriteNode(imageNamed: "Tile02")
                 tileCount += 1
                 tileNode.size = CGSize(width: tileWidth, height: tileHeight)
                 tileNode.position = pointFor(column: column, row: row)
@@ -66,6 +78,21 @@ class GameScene: SKScene {
             tileCount += 1
         }
     }
+    
+    func showSelector(on gem: Gem) {
+        if selectorSprite.parent != nil {
+            selectorSprite.removeFromParent()
+        }
+        
+        if let sprite = gem.sprite {
+            sprite.addChild(selectorSprite)
+        }
+    }
+    
+    func hideSelector() {
+        selectorSprite.removeFromParent()
+    }
+    
     
     // Tile to screen position
     private func pointFor(column: Int, row: Int) -> CGPoint {
@@ -93,9 +120,33 @@ class GameScene: SKScene {
         
         if let toGem = board.GetGemAt(column: toColumn, row: toRow),
            let fromGem = board.GetGemAt(column: swipeFromColumn!, row: swipeFromRow!) {
-            // Swap
+            if let handler = swipeHandler {
+                let swap = Swap(gemA: fromGem, gemB: toGem)
+                handler(swap)
+            }
         }
     }
+    
+    func animate(_ swap: Swap, completion: @escaping () -> Void) {
+        let spriteA = swap.gemA.sprite!
+        let spriteB = swap.gemB.sprite!
+        
+        spriteA.zPosition = 100
+        spriteB.zPosition = 90
+        
+        let duration: TimeInterval = 0.3
+        
+        let moveA = SKAction.move(to: spriteB.position, duration: duration)
+        moveA.timingMode = .easeOut
+        spriteA.run(moveA, completion: completion)
+        
+        let moveB = SKAction.move(to: spriteA.position, duration: duration)
+        moveB.timingMode = .easeOut
+        spriteB.run(moveB)
+        
+        run(swapSound)
+    }
+    
     
     override func didMove(to view: SKView) {
         
@@ -118,9 +169,10 @@ class GameScene: SKScene {
         let location = touch.location(in: gemsLayer)
         let (success, column, row) = convertPoint(location)
         if success {
-            if board.GetGemAt(column: column, row: row) != nil {
+            if let gem = board.GetGemAt(column: column, row: row){
                 swipeFromColumn = column
                 swipeFromRow = row
+                showSelector(on: gem)
             }
         }
     }
@@ -146,7 +198,7 @@ class GameScene: SKScene {
             
             if horizontalDelta != 0 || verticalDelta != 0 {
                 trySwap(horizontalDelta: horizontalDelta, verticalDelta: verticalDelta)
-                
+                hideSelector()
                 swipeFromColumn = nil
             }
         }
@@ -155,6 +207,9 @@ class GameScene: SKScene {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         swipeFromColumn = nil
         swipeFromRow = nil
+        if selectorSprite.parent != nil && swipeFromColumn != nil{
+            hideSelector()
+        }
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {

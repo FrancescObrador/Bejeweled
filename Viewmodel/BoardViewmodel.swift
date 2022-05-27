@@ -12,7 +12,7 @@ let numRows = 10
 
 class Board {
     
-    private var gems = [[Gem?]] (repeating: [Gem?](repeating: nil, count: numColumns), count: numRows)
+    private var gems = [[Gem]] (repeating: [Gem](repeating: Gem(), count: numColumns), count: numRows)
     
     func createGemsSet() -> Set<Gem> {
         var set: Set<Gem> = []
@@ -37,5 +37,20 @@ class Board {
         }
         
         return gems[column][row]
+    }
+    
+    func performSwap(_ swap: Swap) {
+      let columnA = swap.gemA.column
+      let rowA = swap.gemB.row
+      let columnB = swap.gemB.column
+      let rowB = swap.gemB.row
+
+      gems[columnA][rowA] = swap.gemB
+      swap.gemB.column = columnA
+      swap.gemB.row = rowA
+
+      gems[columnB][rowB] = swap.gemA
+      swap.gemA.column = columnB
+      swap.gemA.row = rowB
     }
 }

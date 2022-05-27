@@ -10,7 +10,7 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
-
+    
     var board : Board!
     var gameScene: GameScene!
     
@@ -22,11 +22,12 @@ class GameViewController: UIViewController {
             if let scene = SKScene(fileNamed: "GameScene") {
                 // Set the scale mode to scale to fit the window
                 scene.scaleMode = .aspectFill
+                gameScene = (scene as! GameScene)
+                board = gameScene.board
+                gameScene.swipeHandler = handleSwipe
                 
                 // Present the scene
                 view.presentScene(scene)
-                
-                gameScene = (scene as! GameScene)
             }
             
             view.ignoresSiblingOrder = true
@@ -35,13 +36,22 @@ class GameViewController: UIViewController {
             view.showsNodeCount = true
         }
         
-        gameScene.beginGame()
+        gameScene.Start()
     }
-
+    
+    func handleSwipe(_ swap: Swap) {
+        view.isUserInteractionEnabled = false
+        
+        board.performSwap(swap)
+        gameScene.animate(swap) {
+            self.view.isUserInteractionEnabled = true
+        }
+    }
+    
     override var shouldAutorotate: Bool {
         return true
     }
-
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
             return .allButUpsideDown
@@ -49,7 +59,7 @@ class GameViewController: UIViewController {
             return .all
         }
     }
-
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }

@@ -48,12 +48,17 @@ class Gem : Hashable {
     let gemType: GemType
     var sprite: SKSpriteNode?
     
+    init(){
+        self.column = 0
+        self.row = 0
+        self.gemType = GemType.amber
+    }
+    
     init(column: Int, row: Int, gemType: GemType){
         self.column = column
         self.row = row
         self.gemType = gemType
     }
-    
     
     func buildAnimation(gemName: String) {
         let gemAtlas = SKTextureAtlas(named: gemName)
@@ -68,5 +73,12 @@ class Gem : Hashable {
     }
 }
 
-
-
+struct Swap {
+  let gemA: Gem
+  let gemB: Gem
+  
+  init(gemA: Gem, gemB: Gem) {
+    self.gemA = gemA
+    self.gemB = gemB
+  }
+}
