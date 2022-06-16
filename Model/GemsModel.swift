@@ -29,6 +29,7 @@ enum GemType : Int {
 }
 
 class Gem : Hashable {
+    
     func hash(into hasher: inout Hasher) {
         hasher.combine(column * 10)
         hasher.combine(row)
@@ -47,6 +48,7 @@ class Gem : Hashable {
     var row: Int
     let gemType: GemType
     var sprite: SKSpriteNode?
+    var rotationFrames: [SKTexture] = []
     
     init(){
         self.column = 0
@@ -60,25 +62,50 @@ class Gem : Hashable {
         self.gemType = gemType
     }
     
-    func buildAnimation(gemName: String) {
-        let gemAtlas = SKTextureAtlas(named: gemName)
-        var rotationFrames: [SKTexture] = []
+    func buildAnimation() {
+        let gemAtlas = SKTextureAtlas(named: gemType.spriteName)
         
         let numImages = gemAtlas.textureNames.count
-        for i in 0...numImages {
-            let gemTextureName = (gemName + "_" + String(format: "%02d", i))
+        for i in 0...numImages-1 {
+            let gemTextureName = (gemType.spriteName + "_" + String(format: "%02d", i))
             rotationFrames.append(gemAtlas.textureNamed(gemTextureName))
             print(i)
         }
     }
+    
+    func StartGemAnim() {
+        if rotationFrames.isEmpty {
+            buildAnimation()
+        }
+        
+        sprite!.run(SKAction.repeatForever(
+        SKAction.animate(with: rotationFrames,
+                         timePerFrame: 0.05,
+                         resize: false,
+                         restore: true)),
+        withKey:"Rotation")
+    }
+    
+    func StopGemAnim(){
+        sprite!.removeAllActions()
+    }
 }
 
-struct Swap {
-  let gemA: Gem
-  let gemB: Gem
-  
-  init(gemA: Gem, gemB: Gem) {
-    self.gemA = gemA
-    self.gemB = gemB
-  }
+struct Swap : Hashable {
+    let gemA: Gem
+    let gemB: Gem
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(gemA.hashValue ^ gemB.hashValue)
+    }
+    
+    static func ==(lhs: Swap, rhs: Swap) -> Bool {
+        return (lhs.gemA == rhs.gemA && lhs.gemB == rhs.gemB) || (lhs.gemA == rhs.gemB && lhs.gemB == rhs.gemA)
+        
+    }
+    
+    init(gemA: Gem, gemB: Gem) {
+        self.gemA = gemA
+        self.gemB = gemB
+    }
 }

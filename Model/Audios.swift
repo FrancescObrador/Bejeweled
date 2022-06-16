@@ -7,8 +7,8 @@
 
 import SpriteKit
 
-let swapSound = SKAction.playSoundFileNamed("AAA.wav", waitForCompletion: false)
-let invalidSwapSound = SKAction.playSoundFileNamed("BBB.wav", waitForCompletion: false)
-let matchSound = SKAction.playSoundFileNamed("CCC.wav", waitForCompletion: false)
-let fallingGemSound = SKAction.playSoundFileNamed("DDD.wav", waitForCompletion: false)
-let addGemSound = SKAction.playSoundFileNamed("EEE.wav", waitForCompletion: false)
+let swapSound = SKAction.playSoundFileNamed("start_rotate.wav", waitForCompletion: false)
+let invalidSwapSound = SKAction.playSoundFileNamed("badmove.wav", waitForCompletion: false)
+let matchSound = SKAction.playSoundFileNamed("combo_2.wav", waitForCompletion: false)
+let fallingGemSound = SKAction.playSoundFileNamed("gem_hit.wav", waitForCompletion: false)
+let addGemSound = SKAction.playSoundFileNamed("select.wav", waitForCompletion: false)
