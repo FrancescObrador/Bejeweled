@@ -44,24 +44,32 @@ class GameScene: SKScene {
         gameLayer.addChild(tilesLayer)
         
         // Setup
-        let newGems = board.createGemsSet()
-        AddSprites(for: newGems)
+        Shuffle()
         
         AddTiles()
         
         selector = Selector(width: tileWidth, height: tileHeight)
         
+        SetupScoreLabel()
+        
+    }
+    
+    func SetupScoreLabel(){
         scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
         scoreLabel.text = "Score: 0"
         scoreLabel.fontSize = 50
         scoreLabel.fontColor = SKColor.white
         scoreLabel.position = CGPoint(x: frame.midX-200, y: frame.maxY-200)
-           
         addChild(scoreLabel)
     }
     
     func SetScoreLabel(newValue: Int){
         scoreLabel.text = "Score: " + String(newValue)
+    }
+    
+    func Shuffle(){
+        let newGems = board.createGemsSet()
+        AddSprites(for: newGems)
     }
     
     func AddSprites(for gems: Set<Gem>) {

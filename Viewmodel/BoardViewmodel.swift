@@ -17,7 +17,6 @@ class Board {
     
     var swipeHandler: ((Swap) -> Void)?
     
-    
     private var gems = [[Gem?]] (repeating: [Gem?](repeating: Gem(), count: numColumns), count: numRows)
     private var possibleSwaps: Set<Swap> = []
     
@@ -76,7 +75,6 @@ class Board {
         
         swipeFromColumn = nil
     }
-    
     
     func performSwap(_ swap: Swap) {
         let columnA = swap.gemA.column
@@ -268,9 +266,11 @@ class Board {
         possibleSwaps = set
     }
     
-    func
+    func NeedsToShuffle() -> Bool {
+        return possibleSwaps.isEmpty
+    }
     
-    CanSwap(_ swap: Swap) -> Bool {
+    func CanSwap(_ swap: Swap) -> Bool {
         return possibleSwaps.contains(swap)
     }
     

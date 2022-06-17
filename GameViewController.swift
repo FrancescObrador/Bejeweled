@@ -46,6 +46,12 @@ class GameViewController: UIViewController {
         
         board.DetectPossibleSwaps()
         
+        // if there is no more gems to swap shuffle it
+        if board.NeedsToShuffle() {
+            gameScene.Shuffle()
+            board.DetectPossibleSwaps()
+        }
+        
         if board.CanSwap(swap) {
             board.performSwap(swap)
             HandleMatches()
@@ -83,7 +89,6 @@ class GameViewController: UIViewController {
             matches = board.RemoveMatches()
         }
     }
-    
     
     override var shouldAutorotate: Bool {
         return true
