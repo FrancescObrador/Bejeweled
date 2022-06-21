@@ -1,0 +1,685 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F3D73442861C7B6005F8BB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3D73432861C7B6005F8BB1 /* AppDelegate.swift */; };
+		1F3D73462861C7B6005F8BB1 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F3D73452861C7B6005F8BB1 /* GameScene.sks */; };
+		1F3D734C2861C7B6005F8BB1 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3D734B2861C7B6005F8BB1 /* GameViewController.swift */; };
+		1F3D734F2861C7B7005F8BB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F3D734D2861C7B7005F8BB1 /* Main.storyboard */; };
+		1F3D73512861C7CB005F8BB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F3D73502861C7CB005F8BB1 /* Assets.xcassets */; };
+		1F3D73542861C7CB005F8BB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F3D73522861C7CB005F8BB1 /* LaunchScreen.storyboard */; };
+		1F3D735E2861C7CD005F8BB1 /* BejeweledTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3D735D2861C7CD005F8BB1 /* BejeweledTests.swift */; };
+		1F3D73682861C7CD005F8BB1 /* BejeweledUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3D73672861C7CD005F8BB1 /* BejeweledUITests.swift */; };
+		1F3D736A2861C7CD005F8BB1 /* BejeweledUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3D73692861C7CD005F8BB1 /* BejeweledUITestsLaunchTests.swift */; };
+		1F5A9B1E2861C878005FFCE2 /* GemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A9B0E2861C877005FFCE2 /* GemsModel.swift */; };
+		1F5A9B1F2861C878005FFCE2 /* MatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A9B0F2861C877005FFCE2 /* MatchModel.swift */; };
+		1F5A9B202861C878005FFCE2 /* Audios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A9B102861C878005FFCE2 /* Audios.swift */; };
+		1F5A9B212861C878005FFCE2 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A9B122861C878005FFCE2 /* GameScene.swift */; };
+		1F5A9B222861C878005FFCE2 /* BoardViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A9B142861C878005FFCE2 /* BoardViewmodel.swift */; };
+		1F5A9B232861C878005FFCE2 /* SelectorViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A9B152861C878005FFCE2 /* SelectorViewmodel.swift */; };
+		1F5A9B242861C878005FFCE2 /* amethyst.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A9B172861C878005FFCE2 /* amethyst.atlas */; };
+		1F5A9B252861C878005FFCE2 /* amber.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A9B182861C878005FFCE2 /* amber.atlas */; };
+		1F5A9B262861C878005FFCE2 /* ruby.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A9B192861C878005FFCE2 /* ruby.atlas */; };
+		1F5A9B272861C878005FFCE2 /* esmerald.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A9B1A2861C878005FFCE2 /* esmerald.atlas */; };
+		1F5A9B282861C878005FFCE2 /* sapphire.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A9B1B2861C878005FFCE2 /* sapphire.atlas */; };
+		1F5A9B292861C878005FFCE2 /* topaz.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A9B1C2861C878005FFCE2 /* topaz.atlas */; };
+		1F5A9B2A2861C878005FFCE2 /* diamond.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A9B1D2861C878005FFCE2 /* diamond.atlas */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F3D735A2861C7CD005F8BB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F3D73382861C7B6005F8BB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F3D733F2861C7B6005F8BB1;
+			remoteInfo = Bejeweled;
+		};
+		1F3D73642861C7CD005F8BB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F3D73382861C7B6005F8BB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F3D733F2861C7B6005F8BB1;
+			remoteInfo = Bejeweled;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1F3D73402861C7B6005F8BB1 /* Bejeweled.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bejeweled.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F3D73432861C7B6005F8BB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1F3D73452861C7B6005F8BB1 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		1F3D734B2861C7B6005F8BB1 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		1F3D734E2861C7B7005F8BB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F3D73502861C7CB005F8BB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F3D73532861C7CB005F8BB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1F3D73592861C7CD005F8BB1 /* BejeweledTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BejeweledTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F3D735D2861C7CD005F8BB1 /* BejeweledTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BejeweledTests.swift; sourceTree = "<group>"; };
+		1F3D73632861C7CD005F8BB1 /* BejeweledUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BejeweledUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F3D73672861C7CD005F8BB1 /* BejeweledUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BejeweledUITests.swift; sourceTree = "<group>"; };
+		1F3D73692861C7CD005F8BB1 /* BejeweledUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BejeweledUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1F5A9B0E2861C877005FFCE2 /* GemsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GemsModel.swift; sourceTree = "<group>"; };
+		1F5A9B0F2861C877005FFCE2 /* MatchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchModel.swift; sourceTree = "<group>"; };
+		1F5A9B102861C878005FFCE2 /* Audios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audios.swift; sourceTree = "<group>"; };
+		1F5A9B122861C878005FFCE2 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		1F5A9B142861C878005FFCE2 /* BoardViewmodel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewmodel.swift; sourceTree = "<group>"; };
+		1F5A9B152861C878005FFCE2 /* SelectorViewmodel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectorViewmodel.swift; sourceTree = "<group>"; };
+		1F5A9B172861C878005FFCE2 /* amethyst.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = amethyst.atlas; sourceTree = "<group>"; };
+		1F5A9B182861C878005FFCE2 /* amber.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = amber.atlas; sourceTree = "<group>"; };
+		1F5A9B192861C878005FFCE2 /* ruby.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ruby.atlas; sourceTree = "<group>"; };
+		1F5A9B1A2861C878005FFCE2 /* esmerald.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = esmerald.atlas; sourceTree = "<group>"; };
+		1F5A9B1B2861C878005FFCE2 /* sapphire.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sapphire.atlas; sourceTree = "<group>"; };
+		1F5A9B1C2861C878005FFCE2 /* topaz.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = topaz.atlas; sourceTree = "<group>"; };
+		1F5A9B1D2861C878005FFCE2 /* diamond.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = diamond.atlas; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F3D733D2861C7B6005F8BB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F3D73562861C7CD005F8BB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F3D73602861C7CD005F8BB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F3D73372861C7B6005F8BB1 = {
+			isa = PBXGroup;
+			children = (
+				1F3D73422861C7B6005F8BB1 /* Bejeweled */,
+				1F3D735C2861C7CD005F8BB1 /* BejeweledTests */,
+				1F3D73662861C7CD005F8BB1 /* BejeweledUITests */,
+				1F3D73412861C7B6005F8BB1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1F3D73412861C7B6005F8BB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F3D73402861C7B6005F8BB1 /* Bejeweled.app */,
+				1F3D73592861C7CD005F8BB1 /* BejeweledTests.xctest */,
+				1F3D73632861C7CD005F8BB1 /* BejeweledUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F3D73422861C7B6005F8BB1 /* Bejeweled */ = {
+			isa = PBXGroup;
+			children = (
+				1F5A9B162861C878005FFCE2 /* Atlas */,
+				1F5A9B0D2861C877005FFCE2 /* Model */,
+				1F5A9B112861C878005FFCE2 /* View */,
+				1F5A9B132861C878005FFCE2 /* Viewmodel */,
+				1F3D73432861C7B6005F8BB1 /* AppDelegate.swift */,
+				1F3D73452861C7B6005F8BB1 /* GameScene.sks */,
+				1F3D734B2861C7B6005F8BB1 /* GameViewController.swift */,
+				1F3D734D2861C7B7005F8BB1 /* Main.storyboard */,
+				1F3D73502861C7CB005F8BB1 /* Assets.xcassets */,
+				1F3D73522861C7CB005F8BB1 /* LaunchScreen.storyboard */,
+			);
+			path = Bejeweled;
+			sourceTree = "<group>";
+		};
+		1F3D735C2861C7CD005F8BB1 /* BejeweledTests */ = {
+			isa = PBXGroup;
+			children = (
+				1F3D735D2861C7CD005F8BB1 /* BejeweledTests.swift */,
+			);
+			path = BejeweledTests;
+			sourceTree = "<group>";
+		};
+		1F3D73662861C7CD005F8BB1 /* BejeweledUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1F3D73672861C7CD005F8BB1 /* BejeweledUITests.swift */,
+				1F3D73692861C7CD005F8BB1 /* BejeweledUITestsLaunchTests.swift */,
+			);
+			path = BejeweledUITests;
+			sourceTree = "<group>";
+		};
+		1F5A9B0D2861C877005FFCE2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1F5A9B0E2861C877005FFCE2 /* GemsModel.swift */,
+				1F5A9B0F2861C877005FFCE2 /* MatchModel.swift */,
+				1F5A9B102861C878005FFCE2 /* Audios.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1F5A9B112861C878005FFCE2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F5A9B122861C878005FFCE2 /* GameScene.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F5A9B132861C878005FFCE2 /* Viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				1F5A9B142861C878005FFCE2 /* BoardViewmodel.swift */,
+				1F5A9B152861C878005FFCE2 /* SelectorViewmodel.swift */,
+			);
+			path = Viewmodel;
+			sourceTree = "<group>";
+		};
+		1F5A9B162861C878005FFCE2 /* Atlas */ = {
+			isa = PBXGroup;
+			children = (
+				1F5A9B172861C878005FFCE2 /* amethyst.atlas */,
+				1F5A9B182861C878005FFCE2 /* amber.atlas */,
+				1F5A9B192861C878005FFCE2 /* ruby.atlas */,
+				1F5A9B1A2861C878005FFCE2 /* esmerald.atlas */,
+				1F5A9B1B2861C878005FFCE2 /* sapphire.atlas */,
+				1F5A9B1C2861C878005FFCE2 /* topaz.atlas */,
+				1F5A9B1D2861C878005FFCE2 /* diamond.atlas */,
+			);
+			path = Atlas;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F3D733F2861C7B6005F8BB1 /* Bejeweled */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F3D736D2861C7CD005F8BB1 /* Build configuration list for PBXNativeTarget "Bejeweled" */;
+			buildPhases = (
+				1F3D733C2861C7B6005F8BB1 /* Sources */,
+				1F3D733D2861C7B6005F8BB1 /* Frameworks */,
+				1F3D733E2861C7B6005F8BB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bejeweled;
+			productName = Bejeweled;
+			productReference = 1F3D73402861C7B6005F8BB1 /* Bejeweled.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1F3D73582861C7CD005F8BB1 /* BejeweledTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F3D73702861C7CD005F8BB1 /* Build configuration list for PBXNativeTarget "BejeweledTests" */;
+			buildPhases = (
+				1F3D73552861C7CD005F8BB1 /* Sources */,
+				1F3D73562861C7CD005F8BB1 /* Frameworks */,
+				1F3D73572861C7CD005F8BB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F3D735B2861C7CD005F8BB1 /* PBXTargetDependency */,
+			);
+			name = BejeweledTests;
+			productName = BejeweledTests;
+			productReference = 1F3D73592861C7CD005F8BB1 /* BejeweledTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1F3D73622861C7CD005F8BB1 /* BejeweledUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F3D73732861C7CD005F8BB1 /* Build configuration list for PBXNativeTarget "BejeweledUITests" */;
+			buildPhases = (
+				1F3D735F2861C7CD005F8BB1 /* Sources */,
+				1F3D73602861C7CD005F8BB1 /* Frameworks */,
+				1F3D73612861C7CD005F8BB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F3D73652861C7CD005F8BB1 /* PBXTargetDependency */,
+			);
+			name = BejeweledUITests;
+			productName = BejeweledUITests;
+			productReference = 1F3D73632861C7CD005F8BB1 /* BejeweledUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F3D73382861C7B6005F8BB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					1F3D733F2861C7B6005F8BB1 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					1F3D73582861C7CD005F8BB1 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 1F3D733F2861C7B6005F8BB1;
+					};
+					1F3D73622861C7CD005F8BB1 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 1F3D733F2861C7B6005F8BB1;
+					};
+				};
+			};
+			buildConfigurationList = 1F3D733B2861C7B6005F8BB1 /* Build configuration list for PBXProject "Bejeweled" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F3D73372861C7B6005F8BB1;
+			productRefGroup = 1F3D73412861C7B6005F8BB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F3D733F2861C7B6005F8BB1 /* Bejeweled */,
+				1F3D73582861C7CD005F8BB1 /* BejeweledTests */,
+				1F3D73622861C7CD005F8BB1 /* BejeweledUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F3D733E2861C7B6005F8BB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F5A9B292861C878005FFCE2 /* topaz.atlas in Resources */,
+				1F3D734F2861C7B7005F8BB1 /* Main.storyboard in Resources */,
+				1F5A9B252861C878005FFCE2 /* amber.atlas in Resources */,
+				1F5A9B262861C878005FFCE2 /* ruby.atlas in Resources */,
+				1F5A9B242861C878005FFCE2 /* amethyst.atlas in Resources */,
+				1F5A9B2A2861C878005FFCE2 /* diamond.atlas in Resources */,
+				1F3D73462861C7B6005F8BB1 /* GameScene.sks in Resources */,
+				1F3D73512861C7CB005F8BB1 /* Assets.xcassets in Resources */,
+				1F5A9B272861C878005FFCE2 /* esmerald.atlas in Resources */,
+				1F3D73542861C7CB005F8BB1 /* LaunchScreen.storyboard in Resources */,
+				1F5A9B282861C878005FFCE2 /* sapphire.atlas in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F3D73572861C7CD005F8BB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F3D73612861C7CD005F8BB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F3D733C2861C7B6005F8BB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F5A9B222861C878005FFCE2 /* BoardViewmodel.swift in Sources */,
+				1F5A9B212861C878005FFCE2 /* GameScene.swift in Sources */,
+				1F3D734C2861C7B6005F8BB1 /* GameViewController.swift in Sources */,
+				1F5A9B1F2861C878005FFCE2 /* MatchModel.swift in Sources */,
+				1F3D73442861C7B6005F8BB1 /* AppDelegate.swift in Sources */,
+				1F5A9B1E2861C878005FFCE2 /* GemsModel.swift in Sources */,
+				1F5A9B202861C878005FFCE2 /* Audios.swift in Sources */,
+				1F5A9B232861C878005FFCE2 /* SelectorViewmodel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F3D73552861C7CD005F8BB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F3D735E2861C7CD005F8BB1 /* BejeweledTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F3D735F2861C7CD005F8BB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F3D736A2861C7CD005F8BB1 /* BejeweledUITestsLaunchTests.swift in Sources */,
+				1F3D73682861C7CD005F8BB1 /* BejeweledUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F3D735B2861C7CD005F8BB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F3D733F2861C7B6005F8BB1 /* Bejeweled */;
+			targetProxy = 1F3D735A2861C7CD005F8BB1 /* PBXContainerItemProxy */;
+		};
+		1F3D73652861C7CD005F8BB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F3D733F2861C7B6005F8BB1 /* Bejeweled */;
+			targetProxy = 1F3D73642861C7CD005F8BB1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1F3D734D2861C7B7005F8BB1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F3D734E2861C7B7005F8BB1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1F3D73522861C7CB005F8BB1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F3D73532861C7CB005F8BB1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F3D736B2861C7CD005F8BB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1F3D736C2861C7CD005F8BB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F3D736E2861C7CD005F8BB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FrancescObrador.Bejeweled;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1F3D736F2861C7CD005F8BB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FrancescObrador.Bejeweled;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1F3D73712861C7CD005F8BB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FrancescObrador.BejeweledTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bejeweled.app/Bejeweled";
+			};
+			name = Debug;
+		};
+		1F3D73722861C7CD005F8BB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FrancescObrador.BejeweledTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bejeweled.app/Bejeweled";
+			};
+			name = Release;
+		};
+		1F3D73742861C7CD005F8BB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FrancescObrador.BejeweledUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Bejeweled;
+			};
+			name = Debug;
+		};
+		1F3D73752861C7CD005F8BB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FrancescObrador.BejeweledUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Bejeweled;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F3D733B2861C7B6005F8BB1 /* Build configuration list for PBXProject "Bejeweled" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F3D736B2861C7CD005F8BB1 /* Debug */,
+				1F3D736C2861C7CD005F8BB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F3D736D2861C7CD005F8BB1 /* Build configuration list for PBXNativeTarget "Bejeweled" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F3D736E2861C7CD005F8BB1 /* Debug */,
+				1F3D736F2861C7CD005F8BB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F3D73702861C7CD005F8BB1 /* Build configuration list for PBXNativeTarget "BejeweledTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F3D73712861C7CD005F8BB1 /* Debug */,
+				1F3D73722861C7CD005F8BB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F3D73732861C7CD005F8BB1 /* Build configuration list for PBXNativeTarget "BejeweledUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F3D73742861C7CD005F8BB1 /* Debug */,
+				1F3D73752861C7CD005F8BB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F3D73382861C7B6005F8BB1 /* Project object */;
+}
